@@ -56,8 +56,8 @@
 * 控件id：尽量以对应控件的各单词英文首字母开头，如TextView就以tv开头(tv\_login)，ImageView就以iv开头(iv\_login)，CheckBox就以cb开头(cb\_login)，Button就以btn开头(btn\_login), LinearLayout(ll\_login), RelativeLayout(rl\_login), FrameLayout(fl\_login)等
 * 菜单（menu）的id：建议以action开头,如action\_login
 * 在主题和Style中定义Button，ImageButton等的点击效果，避免使用selector:
-  + \<item name="colorButtonNormal"\>@color\/red\</item\><!--正常状态下的颜色  -->
-  + \<item name="colorControlHighlight"\>@color\/bg_gray\</item\><!--覆盖色，按下的颜色  -->
+  + \<item name="colorButtonNormal"\>@color/red\</item\><!--正常状态下的颜色  -->
+  + \<item name="colorControlHighlight"\>@color/bg_gray\</item\><!--覆盖色，按下的颜色  -->
 5. 开发建议
 ------------------------
 * 所有的非AtionBar的界面均采用Fragment（片段式）来实现，在Activity中只做Fragment对象的管理以及ActionBar的处理工作
