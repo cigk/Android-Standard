@@ -12,18 +12,18 @@
  2. 代码格式 
 ------------------------
 *  **使用统一的代码格式**
- 提交前格式化代码 (Ctrl + Shift +f)
+ 提交前格式化代码 (Ctrl + Shift +f for Eclipse keymap)
 
 3. 代码规范
 ------------------------
 * 包
   + **包名必须全部小写，2个以内单词**
   + 最好为 1 个单数名词
-  + **所有项目的包都要以“com.knet.eqxiu”为父包**
+  + **所有项目的包都要以“com.eqxiu.**”为父包**
 * 类
   + **类中每个单词的首字母必须大写**
   + 每个类都以功能性名词结尾，如xxxActivity,xxxFragment,xxxView,xxxAdapter
-  + **每个类的都应该加上类注释，包括所有者、邮箱及日期**
+  + **每个类的都应该加上类注释，包括所有者、日期及描述**
 * 接口
   + **如果接口表示一个事件，则应该取名为OnXxxListener**
   + 如果表示一种能力，应以"able"、"ible"结尾
@@ -51,22 +51,29 @@
   + 无默认图片时使用tools:src 代替 andriod:src 进行效果预览
   + 无默认背景时使用tools:background 代替 andriod:background 进行效果预览
 * 尽量以结构开头，业务结尾，中间用下划线区分:
-  + layout: activity\_login,fragment\_login,view\_login,listitem\_login
-  + drawable: selector\_login,shap\_login
+  + layout: activity\_login, fragment\_login,view\_login, list\_item\_login
+  + drawable: selector\_login, shape\_login
+  + img: ic\_login for icons, img\_login for images
 * 控件id：尽量以对应控件的各单词英文首字母开头，如TextView就以tv开头(tv\_login)，ImageView就以iv开头(iv\_login)，CheckBox就以cb开头(cb\_login)，Button就以btn开头(btn\_login), LinearLayout(ll\_login), RelativeLayout(rl\_login), FrameLayout(fl\_login)等
 * 菜单（menu）的id：建议以action开头,如action\_login
 * 在主题和Style中定义Button，ImageButton等的点击效果，避免使用selector:
   + \<item name="colorButtonNormal"\>@color/red\</item\><!--正常状态下的颜色  -->
   + \<item name="colorControlHighlight"\>@color/bg_gray\</item\><!--覆盖色，按下的颜色  -->
-* 图片资源必须经过**压缩**才可以放到资源文件夹中使用，不透明的图片使用jpg，透明图片使用无损压缩过的png（ https://tinypng.com ）
+* **图片资源必须经过 *压缩* 才可以放到资源文件夹中使用，不透明的图片使用jpg，透明图片使用无损压缩过的png（ https://tinypng.com ）**
 5. 开发建议
 ------------------------
 * 所有的非AtionBar的界面均采用Fragment（片段式）来实现，在Activity中只做Fragment对象的管理以及ActionBar的处理工作
 * 按功能对Activity和Fragment进行分包（可以考虑将相同功能模块的Activity和Fragment放在同一个包下）
-* 所有Activity继承BaseActivity，所有Fragment继承BaseFragment，公共部分应全部抽取到基类中
+* **所有Activity继承BaseActivity，所有Fragment继承BaseFragment，公共部分应全部抽取到基类中**
+* **所有ListView和GridView的Adapter集成CommonAdapter**
 * 不要使用静态全局变量，如果确实需要，可以考虑将其作为Application的成员变量（慎用）
 * 如果仅希望一段代码在UI线程执行，可以考虑使用activity.runOnUiThread方法
 * 不要在Activity或者Fragment中写跟界面无关的代码
-6. 其他开发建议
+6. 其他建议
 ------------------------
 https://github.com/cigk/AndroidBestPractice/blob/master/translations/Chinese/README.cn.md
+
+
+
+
+
