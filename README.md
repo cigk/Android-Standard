@@ -58,7 +58,7 @@
 * 在主题和Style中定义Button，ImageButton等的点击效果，避免使用selector:
   + \<item name="colorButtonNormal"\>@color/red\</item\><!--正常状态下的颜色  -->
   + \<item name="colorControlHighlight"\>@color/bg_gray\</item\><!--覆盖色，按下的颜色  -->
-* 图片资源必须经过压缩才可以放到资源文件夹中使用，不透明的图片使用jpg，透明图片使用无损压缩过的png（ http://www.atool.org/pngcompression.php ）
+* 图片资源必须经过**压缩**才可以放到资源文件夹中使用，不透明的图片使用jpg，透明图片使用无损压缩过的png（ https://tinypng.com ）
 5. 开发建议
 ------------------------
 * 所有的非AtionBar的界面均采用Fragment（片段式）来实现，在Activity中只做Fragment对象的管理以及ActionBar的处理工作
